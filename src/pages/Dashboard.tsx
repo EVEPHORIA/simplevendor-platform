@@ -1,13 +1,15 @@
 
 import React from 'react';
-import DashboardLayout from '@/components/dashboard/Dashboard';
 import VendorDashboard from '@/components/dashboard/VendorDashboard';
+import DashboardLayout from '@/components/dashboard/Dashboard';
 
 const Dashboard = () => {
   return (
-    <DashboardLayout>
-      <VendorDashboard />
-    </DashboardLayout>
+    <div>
+      <DashboardLayout>
+        <VendorDashboard />
+      </DashboardLayout>
+    </div>
   );
 };
 

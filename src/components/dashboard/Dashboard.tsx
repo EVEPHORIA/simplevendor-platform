@@ -1,10 +1,13 @@
 
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { Outlet } from 'react-router-dom';
 import VendorSidebar from './VendorSidebar';
 
-const Dashboard = () => {
+interface DashboardLayoutProps {
+  children: ReactNode;
+}
+
+const Dashboard = ({ children }: DashboardLayoutProps) => {
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full">
@@ -42,7 +45,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="p-6">
-            <Outlet />
+            {children}
           </div>
         </main>
       </div>
