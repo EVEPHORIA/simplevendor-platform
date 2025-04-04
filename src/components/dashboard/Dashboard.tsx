@@ -2,12 +2,36 @@
 import React, { ReactNode } from 'react';
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import VendorSidebar from './VendorSidebar';
+import { useAuth } from '@/context/AuthContext';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { 
+  DropdownMenu, 
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuLabel, 
+  DropdownMenuSeparator, 
+  DropdownMenuTrigger 
+} from '@/components/ui/dropdown-menu';
+import { LogOut, Bell } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface DashboardLayoutProps {
   children: ReactNode;
 }
 
 const Dashboard = ({ children }: DashboardLayoutProps) => {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await logout();
+    navigate('/');
+  };
+
+  const userInitials = user?.displayName 
+    ? user.displayName.split(' ').map(name => name[0].toUpperCase()).join('')
+    : 'U';
+
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full">
@@ -18,29 +42,38 @@ const Dashboard = ({ children }: DashboardLayoutProps) => {
             <div className="flex-1 flex justify-end">
               <div className="flex items-center space-x-4">
                 {/* Notifications */}
-                <button className="p-2 rounded-full hover:bg-gray-100">
-                  <svg
-                    className="h-5 w-5 text-gray-500"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-                  </svg>
+                <button className="p-2 rounded-full hover:bg-gray-100 relative">
+                  <Bell className="h-5 w-5 text-gray-500" />
+                  <span className="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500"></span>
                 </button>
                 
                 {/* Profile */}
-                <div className="relative">
-                  <button className="flex items-center space-x-1">
-                    <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                      JD
-                    </div>
-                  </button>
-                </div>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="flex items-center space-x-1">
+                      <Avatar>
+                        <AvatarImage src={user?.photoURL || undefined} />
+                        <AvatarFallback className="bg-primary/10 text-primary">
+                          {userInitials}
+                        </AvatarFallback>
+                      </Avatar>
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                    <DropdownMenuLabel>
+                      <div className="font-normal">
+                        <div className="text-sm font-medium">{user?.displayName}</div>
+                        <div className="text-xs text-gray-500 truncate max-w-[200px]">{user?.email}</div>
+                      </div>
+                    </DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem onClick={handleLogout} className="text-red-600 cursor-pointer">
+                      <LogOut className="h-4 w-4 mr-2" />
+                      Logout
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
             </div>
           </div>

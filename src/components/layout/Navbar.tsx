@@ -1,13 +1,17 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, LogOut } from 'lucide-react';
+import { useAuth } from '@/context/AuthContext';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, logout } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +32,15 @@ const Navbar = () => {
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
+
+  const handleLogout = async () => {
+    await logout();
+    navigate('/');
+  };
+
+  const handleLogin = () => {
+    navigate('/login');
+  };
 
   const navbarClass = isScrolled
     ? 'fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-lg shadow-sm z-50 transition-all duration-300'
@@ -56,14 +69,33 @@ const Navbar = () => {
             <Link to="/event-registration" className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === '/event-registration' ? 'text-primary' : 'text-muted-foreground'}`}>
               Event Registration
             </Link>
-            <Link to="/dashboard" className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === '/dashboard' ? 'text-primary' : 'text-muted-foreground'}`}>
-              Dashboard
-            </Link>
+            {user && (
+              <Link to="/dashboard" className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === '/dashboard' ? 'text-primary' : 'text-muted-foreground'}`}>
+                Dashboard
+              </Link>
+            )}
             <div className="flex items-center space-x-4">
-              <Button variant="outline" size="sm">
-                Sign In
-              </Button>
-              <Button size="sm">Get Started</Button>
+              {user ? (
+                <div className="flex items-center space-x-3">
+                  <Avatar>
+                    <AvatarImage src={user.photoURL || undefined} />
+                    <AvatarFallback>
+                      {user.displayName ? user.displayName.charAt(0).toUpperCase() : 'U'}
+                    </AvatarFallback>
+                  </Avatar>
+                  <Button variant="outline" size="sm" onClick={handleLogout}>
+                    <LogOut className="h-4 w-4 mr-2" />
+                    Sign Out
+                  </Button>
+                </div>
+              ) : (
+                <>
+                  <Button variant="outline" size="sm" onClick={handleLogin}>
+                    Sign In
+                  </Button>
+                  <Button size="sm" onClick={handleLogin}>Get Started</Button>
+                </>
+              )}
             </div>
           </div>
 
@@ -106,19 +138,43 @@ const Navbar = () => {
           >
             Event Registration
           </Link>
-          <Link
-            to="/dashboard"
-            className={`block px-3 py-2 rounded-md text-base font-medium ${
-              location.pathname === '/dashboard' ? 'text-primary' : 'text-gray-700'
-            } hover:text-primary hover:bg-gray-50`}
-          >
-            Dashboard
-          </Link>
+          {user && (
+            <Link
+              to="/dashboard"
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                location.pathname === '/dashboard' ? 'text-primary' : 'text-gray-700'
+              } hover:text-primary hover:bg-gray-50`}
+            >
+              Dashboard
+            </Link>
+          )}
           <div className="pt-4 pb-2 border-t border-gray-200">
-            <Button variant="outline" className="w-full mb-2">
-              Sign In
-            </Button>
-            <Button className="w-full">Get Started</Button>
+            {user ? (
+              <div className="flex items-center px-3 py-2">
+                <Avatar className="h-8 w-8 mr-2">
+                  <AvatarImage src={user.photoURL || undefined} />
+                  <AvatarFallback>
+                    {user.displayName ? user.displayName.charAt(0).toUpperCase() : 'U'}
+                  </AvatarFallback>
+                </Avatar>
+                <div className="ml-2 text-sm">
+                  <div className="font-medium">{user.displayName}</div>
+                  <Button variant="outline" size="sm" className="mt-1" onClick={handleLogout}>
+                    <LogOut className="h-3 w-3 mr-1" />
+                    Sign Out
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <>
+                <Button variant="outline" className="w-full mb-2" onClick={handleLogin}>
+                  Sign In
+                </Button>
+                <Button className="w-full" onClick={handleLogin}>
+                  Get Started
+                </Button>
+              </>
+            )}
           </div>
         </div>
       </div>
