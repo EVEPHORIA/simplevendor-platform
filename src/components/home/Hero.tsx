@@ -42,8 +42,7 @@ const Hero = () => {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 sm:pt-24 sm:pb-16">
         <div ref={heroRef} className="stagger-children max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-            <span className="block">Effortless Event Management</span>
-            <span className="block mt-2 gradient-text">For Vendors and Organizers</span>
+            <span className="block gradient-text">Where Every Soul Comes Alive</span>
           </h1>
           <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
             Simplify your event management process with our all-in-one platform. Connect with vendors, organize events, and manage everything seamlessly.
