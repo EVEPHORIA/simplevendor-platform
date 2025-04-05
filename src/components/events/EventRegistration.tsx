@@ -46,6 +46,9 @@ const mockVendors = [
   { id: 8, name: 'Clean Team', category: 'Cleaning', rating: 4.6 },
 ];
 
+// Add these imports at the top with other imports
+import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore';
+
 const EventRegistration = () => {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -107,16 +110,27 @@ const EventRegistration = () => {
     window.scrollTo(0, 0);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const db = getFirestore();
+      const doc = await addDoc(collection(db, "events"), {
+        ...eventData,
+        date: eventData.date ? eventData.date.toISOString() : null, // Convert Date to ISO string
+        createdAt: serverTimestamp(),
+        status: 'pending',
+      });
+      console.log('Event added with ID: ', doc.id);
       setLoading(false);
       toast.success('Event registration successful!');
-      setStep(3); // Success step
-    }, 2000);
+      setStep(3);
+    } catch (error: any) {
+      setLoading(false);
+      toast.error('Failed to register event. Please try again.');
+      console.error('Error registering event:', error.message);
+    }
   };
 
   const renderStepIndicator = () => {
