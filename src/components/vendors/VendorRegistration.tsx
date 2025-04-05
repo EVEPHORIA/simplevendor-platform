@@ -109,18 +109,27 @@ const VendorRegistration = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const { addDocument } = await import('@/lib/firestore');
+      await addDocument('vendors', {
+        ...vendorData,
+        status: 'pending',
+        documents: [], // Reset documents array since we'll handle file upload separately
+        registeredAt: new Date().toISOString()
+      });
+
       setLoading(false);
       toast.success('Registration successful! Your account is being reviewed.');
-      
-      // Here we would normally redirect to a success page or dashboard
       setStep(5); // Success step
-    }, 2000);
+    } catch (error: any) {
+      setLoading(false);
+      toast.error('Failed to register. Please try again.');
+      console.error('Error registering vendor:', error.message);
+    }
   };
 
   const renderStepIndicator = () => {
