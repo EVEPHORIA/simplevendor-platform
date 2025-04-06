@@ -22,14 +22,14 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col my-24 pb-16">
+    <div className="dark min-h-screen flex flex-col my-24 pb-16 bg-background text-foreground">
       <Navbar />
-      <main className="flex-grow flex items-center justify-center bg-gray-50 mb-16">
-        <div className="max-w-md w-full px-6 py-12 bg-white shadow-lg rounded-lg">
-          <h1 className="text-2xl font-bold text-center mb-8">Sign In to Your Account</h1>
+      <main className="flex-grow flex items-center justify-center mb-16">
+        <div className="max-w-md w-full px-6 py-12 bg-card shadow-lg rounded-lg border border-border">
+          <h1 className="text-2xl font-bold text-center mb-8 text-card-foreground">Sign In to Your Account</h1>
           
           <div className="space-y-6">
-            <p className="text-gray-600 text-center">
+            <p className="text-muted-foreground text-center">
               Access your dashboard to manage events and vendors
             </p>
             
@@ -60,7 +60,7 @@ const Login = () => {
                 Sign in with Google
               </Button>
               
-              <div className="text-center text-sm text-gray-500">
+              <div className="text-center text-sm text-muted-foreground">
                 <p>Don't have an account?</p>
                 <p>Sign in with Google to create one automatically</p>
               </div>

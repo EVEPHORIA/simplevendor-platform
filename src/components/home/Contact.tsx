@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
@@ -63,13 +64,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="py-24 bg-white">
+    <div className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Get in Touch
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-muted-foreground">
             Have questions about our services? We'd love to hear from you.
           </p>
         </div>
@@ -84,7 +85,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full"
+                className="w-full bg-input text-foreground"
               />
             </div>
             <div>
@@ -95,7 +96,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full"
+                className="w-full bg-input text-foreground"
               />
             </div>
             <div>
@@ -106,7 +107,7 @@ const Contact = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full"
+                className="w-full bg-input text-foreground"
               />
             </div>
             <div>
@@ -116,7 +117,7 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full min-h-[150px]"
+                className="w-full min-h-[150px] bg-input text-foreground"
               />
             </div>
             <div>
