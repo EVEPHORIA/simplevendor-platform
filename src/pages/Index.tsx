@@ -9,7 +9,7 @@ import ChatbotInterface from '@/components/shared/ChatbotInterface';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col dark">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
         <Hero />
