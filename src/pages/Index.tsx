@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/home/Hero';
 import Features from '@/components/home/Features';
+import Contact from '@/components/home/Contact';
 import ChatbotInterface from '@/components/shared/ChatbotInterface';
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <Features />
+        <Contact />
       </main>
       <Footer />
       <ChatbotInterface />
