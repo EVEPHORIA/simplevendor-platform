@@ -43,7 +43,7 @@ const Hero = () => {
             <span className="block gradient-text pb-2">Where Every Soul Comes Alive</span>
           </h1>
           <p className="mt-6 text-xl text-white max-w-2xl mx-auto">
-            At EVEPHORIA, we don't just plan events—we create moments that live forever. We blend artistry, innovation, and precision to craft experiences that are nothing short of magical. From lavish weddings to high-profile corporate affairs, every detail is designed to inspire, engage, and mesmerize. With a tech-driven approach, elite vendor partnerships, and round-the-clock dedication, we transform visions into breathtaking realities. No idea is too bold, no dream too big—if you can imagine it, we can create it.
+            From planning to execution, we handle every detail—so you can enjoy a seamless, stress-free celebration. Let's create magic!
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             
