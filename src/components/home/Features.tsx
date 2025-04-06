@@ -76,23 +76,23 @@ const Features = () => {
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             All-in-One Event Management Solution
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-muted-foreground">
             Our platform offers a comprehensive suite of tools to streamline every aspect of event planning and vendor management.
           </p>
         </div>
 
         <div ref={featuresRef} className="stagger-children grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <div
               key={feature.name}
-              className="relative bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="relative bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div className="absolute top-6 left-6 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-500">
+              <div className="absolute top-6 left-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                 <feature.icon className="h-6 w-6" />
               </div>
               <div className="ml-20">
-                <h3 className="text-lg font-medium text-gray-900">{feature.name}</h3>
-                <p className="mt-2 text-base text-gray-600">{feature.description}</p>
+                <h3 className="text-lg font-medium text-card-foreground">{feature.name}</h3>
+                <p className="mt-2 text-base text-muted-foreground">{feature.description}</p>
               </div>
             </div>
           ))}
