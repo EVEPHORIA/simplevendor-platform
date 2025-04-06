@@ -70,10 +70,10 @@ const Features = () => {
   }, []);
 
   return (
-    <div className="py-24 bg-background">
+    <div className="pb-24 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             All-in-One Event Management Solution
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">

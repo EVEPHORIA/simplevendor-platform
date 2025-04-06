@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t">
+    <footer className="bg-black border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">EVEPHORIA</h3>
+            <h3 className="text-lg font-semibold">
+              <img src="/Logo_mini_cropped.png" alt="Logo" className="h-24"  />
+            </h3>
             <p className="text-sm text-gray-600 max-w-xs">
               Where every event becomes an experience, connecting vendors and event organizers on a single platform.
             </p>
@@ -41,7 +43,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Platform</h3>
+            <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Platform</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/" className="text-sm text-gray-600 hover:text-primary">Home</Link>
@@ -59,7 +61,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Company</h3>
+            <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-sm text-gray-600 hover:text-primary">About</a>
@@ -77,7 +79,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Legal</h3>
+            <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Legal</h3>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-sm text-gray-600 hover:text-primary">Privacy Policy</a>

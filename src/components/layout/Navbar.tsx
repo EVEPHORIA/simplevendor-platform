@@ -43,7 +43,7 @@ const Navbar = () => {
   };
 
   const navbarClass = isScrolled
-    ? 'fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-lg shadow-sm z-50 transition-all duration-300'
+    ? 'fixed top-0 left-0 right-0 bg-black/90 backdrop-blur-lg shadow-sm z-50 transition-all duration-300'
     : 'fixed top-0 left-0 right-0 bg-transparent z-50 transition-all duration-300';
 
   return (
@@ -52,9 +52,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-700">
-                EVEPHORIA
-              </span>
+              <img src="/Evephoria Logo_page-0001.png" alt="Logo" className="h-16 w-auto" />
             </Link>
           </div>
 
