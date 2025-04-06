@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { LogOut, Bell } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { ThemeToggle } from '@/components/shared/ThemeToggle';
 
 interface DashboardLayoutProps {
   children: ReactNode;
@@ -37,10 +38,13 @@ const Dashboard = ({ children }: DashboardLayoutProps) => {
       <div className="min-h-screen flex w-full">
         <VendorSidebar />
         <main className="flex-1 overflow-auto">
-          <div className="flex items-center h-16 px-4 border-b bg-white">
+          <div className="flex items-center h-16 px-4 border-b bg-black">
             <SidebarTrigger />
             <div className="flex-1 flex justify-end">
               <div className="flex items-center space-x-4">
+                {/* Theme Toggle */}
+                {/* <ThemeToggle /> */}
+                
                 {/* Notifications */}
                 <button className="p-2 rounded-full hover:bg-gray-100 relative">
                   <Bell className="h-5 w-5 text-gray-500" />

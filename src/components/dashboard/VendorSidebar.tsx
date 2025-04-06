@@ -33,7 +33,9 @@ const VendorSidebar = () => {
     <Sidebar>
       <SidebarHeader className="flex h-16 items-center border-b px-4">
         <Link to="/" className="flex items-center">
-          <span className="text-xl font-bold gradient-text">EVEPHORIA</span>
+          <span className="text-xl font-bold gradient-text">
+            <img src="/Evephoria Logo_page-0001.png" alt="Logo" className="h-full w-auto" />
+          </span>
         </Link>
       </SidebarHeader>
       

@@ -32,7 +32,7 @@ const VendorRegistration = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-black">
       <Navbar />
       <main className="flex-grow pt-16">
         <div className="container mx-auto px-4 py-8">

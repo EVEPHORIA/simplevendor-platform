@@ -541,7 +541,7 @@ const VendorRegistration = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12 max-w-3xl">
+    <div className="container bg-black mx-auto px-4 py-12 max-w-3xl">
       {step < 5 && renderStepIndicator()}
       {renderForm()}
       
