@@ -21,7 +21,7 @@ const VendorRegistration = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="dark min-h-screen flex items-center justify-center bg-background text-foreground">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
       </div>
     );
@@ -38,7 +38,7 @@ const VendorRegistration = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl font-bold mb-2">Vendor Registration</h1>
-            <p className="text-gray-600 mb-8">Join our network of professional vendors and grow your business</p>
+            <p className="text-muted-foreground mb-8">Join our network of professional vendors and grow your business</p>
             <VendorRegistrationForm />
           </div>
         </div>
