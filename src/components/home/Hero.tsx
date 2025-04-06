@@ -3,9 +3,11 @@ import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '@/context/AuthContext';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const { user } = useAuth();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,13 +50,13 @@ const Hero = () => {
             Welcome to EVEPHORIA — where every event becomes an experience. We blend innovation with emotion, style with strategy, and detail with drama to create unforgettable moments. Whether it's a grand corporate affair, a luxury private gathering, or an electrifying youth celebration — we don't just plan events, we create EVEPHORIA.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/vendor-registration">
+            <Link to={user ? "/vendor-registration" : "/login"}>
               <Button size="lg" className="w-full sm:w-auto group">
                 Register as Vendor
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
-            <Link to="/event-registration">
+            <Link to={user ? "/event-registration" : "/login"}>
               <Button size="lg" variant="outline" className="w-full sm:w-auto">
                 Plan Your Event
               </Button>
