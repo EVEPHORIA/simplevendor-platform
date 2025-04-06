@@ -45,7 +45,7 @@ const Hero = () => {
             <span className="block gradient-text">Where Every Soul Comes Alive</span>
           </h1>
           <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
-            Simplify your event management process with our all-in-one platform. Connect with vendors, organize events, and manage everything seamlessly.
+            Welcome to EVEPHORIA — where every event becomes an experience. We blend innovation with emotion, style with strategy, and detail with drama to create unforgettable moments. Whether it's a grand corporate affair, a luxury private gathering, or an electrifying youth celebration — we don't just plan events, we create EVEPHORIA.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/vendor-registration">
