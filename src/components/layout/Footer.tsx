@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">SimpleVendor</h3>
+            <h3 className="text-lg font-semibold">EVEPHORIA</h3>
             <p className="text-sm text-gray-600 max-w-xs">
-              Simplifying event management by connecting vendors and event organizers on a single platform.
+              Where every event becomes an experience, connecting vendors and event organizers on a single platform.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-gray-500">
@@ -94,7 +94,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-sm text-gray-500 text-center">
-            &copy; {new Date().getFullYear()} SimpleVendor. All rights reserved.
+            &copy; {new Date().getFullYear()} EVEPHORIA. All rights reserved.
           </p>
         </div>
       </div>

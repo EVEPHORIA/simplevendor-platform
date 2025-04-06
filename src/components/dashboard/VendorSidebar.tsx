@@ -33,7 +33,7 @@ const VendorSidebar = () => {
     <Sidebar>
       <SidebarHeader className="flex h-16 items-center border-b px-4">
         <Link to="/" className="flex items-center">
-          <span className="text-xl font-bold gradient-text">SimpleVendor</span>
+          <span className="text-xl font-bold gradient-text">EVEPHORIA</span>
         </Link>
       </SidebarHeader>
       

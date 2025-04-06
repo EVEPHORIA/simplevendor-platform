@@ -22,9 +22,9 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col my-24 pb-16">
       <Navbar />
-      <main className="flex-grow flex items-center justify-center bg-gray-50">
+      <main className="flex-grow flex items-center justify-center bg-gray-50 mb-16">
         <div className="max-w-md w-full px-6 py-12 bg-white shadow-lg rounded-lg">
           <h1 className="text-2xl font-bold text-center mb-8">Sign In to Your Account</h1>
           

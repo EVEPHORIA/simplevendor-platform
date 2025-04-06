@@ -19,7 +19,7 @@ const ChatbotInterface = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: 'Hello! I\'m your SimpleVendor assistant. How can I help you today?',
+      text: 'Hello! I\'m your EVEPHORIA assistant. How can I help you today?',
       sender: 'bot',
       timestamp: new Date(),
     },
@@ -114,7 +114,7 @@ const ChatbotInterface = () => {
               </div>
             </Avatar>
             <div>
-              <h3 className="font-medium">SimpleVendor Assistant</h3>
+              <h3 className="font-medium">EVEPHORIA Assistant</h3>
               <p className="text-xs text-primary-foreground">AI Powered Support</p>
             </div>
           </div>
