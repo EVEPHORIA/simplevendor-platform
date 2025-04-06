@@ -68,7 +68,7 @@ const AboutUs = () => {
             About Us
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Transforming ordinary events into extraordinary experiences.
+            At EVEPHORIA, we don't just plan events—we create moments that live forever. We blend artistry, innovation, and precision to craft experiences that are nothing short of magical. From lavish weddings to high-profile corporate affairs, every detail is designed to inspire, engage, and mesmerize. With a tech-driven approach, elite vendor partnerships, and round-the-clock dedication, we transform visions into breathtaking realities. No idea is too bold, no dream too big—if you can imagine it, we can create it.
           </p>
         </div>
 
