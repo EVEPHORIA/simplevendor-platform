@@ -55,7 +55,7 @@ const Services = () => {
             Our Services
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Discover our comprehensive range of event management solutions
+            At EVEPHORIA: The Event Planners, we don't just plan events—we craft immersive realities that evoke emotion, spark connections, and leave lasting impressions. Our signature 3C Model represents the essence of what we do best—Crowned Events, Corporate Events, Commercial Events
           </p>
         </div>
 
