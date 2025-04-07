@@ -67,10 +67,10 @@ const Footer = () => {
                 <a href="#" className="text-sm text-gray-600 hover:text-primary">About</a>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-primary">Blog</a>
+                <a href="#" className="text-sm text-gray-600 hover:text-primary">Services</a>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-primary">Careers</a>
+                <a href="#" className="text-sm text-gray-600 hover:text-primary">All-in-One Solutions</a>
               </li>
               <li>
                 <a href="#" className="text-sm text-gray-600 hover:text-primary">Contact</a>
