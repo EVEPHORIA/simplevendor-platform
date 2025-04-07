@@ -64,16 +64,16 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="text-sm text-gray-600 hover:text-primary">About Us</a>
+                <a href="#" className="text-sm text-gray-600 hover:text-primary">About</a>
               </li>
               <li>
-                <a href="#services" className="text-sm text-gray-600 hover:text-primary">Our Services</a>
+                <a href="#" className="text-sm text-gray-600 hover:text-primary">Blog</a>
               </li>
               <li>
-                <a href="#features" className="text-sm text-gray-600 hover:text-primary">All-in-One Event Management Solution</a>
+                <a href="#" className="text-sm text-gray-600 hover:text-primary">Careers</a>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-primary">Contact Us</a>
+                <a href="#" className="text-sm text-gray-600 hover:text-primary">Contact</a>
               </li>
             </ul>
           </div>
