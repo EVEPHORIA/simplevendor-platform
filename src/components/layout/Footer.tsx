@@ -54,9 +54,9 @@ const Footer = () => {
               <li>
                 <Link to="/event-registration" className="text-sm text-gray-600 hover:text-primary">Event Registration</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/dashboard" className="text-sm text-gray-600 hover:text-primary">Dashboard</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           
@@ -64,16 +64,16 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-primary">About</a>
+                <a href="/#about-us" className="text-sm text-gray-600 hover:text-primary">About</a>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-primary">Blog</a>
+                <a href="#services" className="text-sm text-gray-600 hover:text-primary">Services</a>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-primary">Careers</a>
+                <a href="#solutions" className="text-sm text-gray-600 hover:text-primary">Solutions</a>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-primary">Contact</a>
+                <a href="#contact-us" className="text-sm text-gray-600 hover:text-primary">Contact</a>
               </li>
             </ul>
           </div>

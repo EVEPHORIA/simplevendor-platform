@@ -67,11 +67,11 @@ const Navbar = () => {
             <Link to="/event-registration" className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === '/event-registration' ? 'text-primary' : 'text-muted-foreground'}`}>
               Event Registration
             </Link>
-            {user && (
+            {/* {user && (
               <Link to="/dashboard" className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === '/dashboard' ? 'text-primary' : 'text-muted-foreground'}`}>
                 Dashboard
               </Link>
-            )}
+            )} */}
             <div className="flex items-center space-x-4">
               {user ? (
                 <div className="flex items-center space-x-3">

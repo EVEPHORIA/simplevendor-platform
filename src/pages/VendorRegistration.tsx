@@ -44,7 +44,7 @@ const VendorRegistration = () => {
         </div>
       </main>
       <Footer />
-      <ChatbotInterface />
+      {/* <ChatbotInterface /> */}
     </div>
   );
 };
