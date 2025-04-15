@@ -13,20 +13,18 @@ import { Progress } from '@/components/ui/progress';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { name: 'Jan', value: 400 },
-  { name: 'Feb', value: 300 },
-  { name: 'Mar', value: 600 },
-  { name: 'Apr', value: 800 },
-  { name: 'May', value: 500 },
-  { name: 'Jun', value: 900 },
-  { name: 'Jul', value: 1100 },
+  { name: 'Jan', value: 0 },
+  { name: 'Feb', value: 0 },
+  { name: 'Mar', value: 0 },
+  { name: 'Apr', value: 0 },
+  { name: 'May', value: 0 },
+  { name: 'Jun', value: 0 },
+  { name: 'Jul', value: 0 },
 ];
 
 const recentEvents = [
-  { id: 1, name: 'Corporate Conference', date: '2023-10-25', client: 'Acme Corp', status: 'Upcoming' },
-  { id: 2, name: 'Wedding Ceremony', date: '2023-10-18', client: 'John & Sarah', status: 'Completed' },
-  { id: 3, name: 'Product Launch', date: '2023-10-15', client: 'Tech Solutions', status: 'Completed' },
-  { id: 4, name: 'Charity Gala', date: '2023-11-05', client: 'Hope Foundation', status: 'Upcoming' },
+  { id: 1, name: 'Event', date: '2023-10-25', client: 'Client', status: 'Upcoming' },
+  
 ];
 
 const VendorDashboard = () => {
@@ -46,7 +44,7 @@ const VendorDashboard = () => {
               </div>
               <div className="flex-1">
                 <div className="text-sm font-medium text-muted-foreground">Upcoming Events</div>
-                <div className="text-2xl font-bold">12</div>
+                <div className="text-2xl font-bold">0</div>
               </div>
             </div>
           </CardContent>
@@ -60,7 +58,7 @@ const VendorDashboard = () => {
               </div>
               <div className="flex-1">
                 <div className="text-sm font-medium text-muted-foreground">Revenue (MTD)</div>
-                <div className="text-2xl font-bold">$8,450</div>
+                <div className="text-2xl font-bold">₹0</div>
               </div>
             </div>
           </CardContent>
@@ -74,7 +72,7 @@ const VendorDashboard = () => {
               </div>
               <div className="flex-1">
                 <div className="text-sm font-medium text-muted-foreground">Active Clients</div>
-                <div className="text-2xl font-bold">24</div>
+                <div className="text-2xl font-bold">0</div>
               </div>
             </div>
           </CardContent>
@@ -88,7 +86,7 @@ const VendorDashboard = () => {
               </div>
               <div className="flex-1">
                 <div className="text-sm font-medium text-muted-foreground">Pending Approvals</div>
-                <div className="text-2xl font-bold">5</div>
+                <div className="text-2xl font-bold">0</div>
               </div>
             </div>
           </CardContent>
@@ -197,17 +195,17 @@ const VendorDashboard = () => {
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="text-sm font-medium">Document Verification</div>
-                  <div className="text-sm text-muted-foreground">75%</div>
+                  <div className="text-sm text-muted-foreground">0%</div>
                 </div>
-                <Progress value={75} className="h-2" />
+                <Progress value={0} className="h-2" />
               </div>
               
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="text-sm font-medium">Service Listing Completion</div>
-                  <div className="text-sm text-muted-foreground">60%</div>
+                  <div className="text-sm text-muted-foreground">0%</div>
                 </div>
-                <Progress value={60} className="h-2" />
+                <Progress value={0} className="h-2" />
               </div>
               
               <div className="pt-4 space-y-4">

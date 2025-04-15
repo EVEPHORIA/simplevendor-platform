@@ -21,7 +21,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
-      <ChatbotInterface />
+      {/* <ChatbotInterface /> */}
     </div>
   );
 };

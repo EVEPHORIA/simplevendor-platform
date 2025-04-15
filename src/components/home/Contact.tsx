@@ -6,6 +6,7 @@ import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { useToast } from '../../hooks/use-toast';
+import { Mail, Phone } from 'lucide-react';
 
 interface ContactFormData {
   name: string;
@@ -64,7 +65,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="py-24 bg-black">
+    <div className="py-24 bg-black" id="contact-us">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -73,6 +74,7 @@ const Contact = () => {
           <p className="mt-4 text-lg text-muted-foreground">
             Have questions about our services? We'd love to hear from you.
           </p>
+         
         </div>
 
         <div className="max-w-lg mx-auto">
@@ -130,6 +132,16 @@ const Contact = () => {
               </Button>
             </div>
           </form>
+          <div className="mt-6 flex flex-row items-center justify-center space-x-6">
+            <div className="flex items-center space-x-2 text-white">
+              <Mail className="h-5 w-5" />
+              <span>info@evephoriaevents.com</span>
+            </div>
+            <div className="flex items-center space-x-2 text-white">
+              <Phone className="h-5 w-5" />
+              <span>8448704579</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
