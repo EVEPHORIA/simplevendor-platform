@@ -52,7 +52,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <img src="/Evephoria Logo_page-0001.png" alt="Logo" className="h-16 w-auto" />
+              <img src="/evephoria_logo.png" alt="Logo" className="h-16 w-auto" />
             </Link>
           </div>
 

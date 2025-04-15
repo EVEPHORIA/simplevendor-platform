@@ -42,8 +42,8 @@ const Hero = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
             <span className="block gradient-text pb-2">Where Every Soul Comes Alive</span>
           </h1>
-          <p className="mt-6 text-xl text-white  max-w-2xl mx-auto">
-            Welcome to EVEPHORIA — where every event becomes an experience. We blend innovation with emotion, style with strategy, and detail with drama to create unforgettable moments. Whether it's a grand corporate affair, a luxury private gathering, or an electrifying youth celebration — we don't just plan events, we create EVEPHORIA.
+          <p className="mt-6 text-xl text-white max-w-2xl mx-auto">
+            From planning to execution, we handle every detail—so you can enjoy a seamless, stress-free celebration. Let's create magic!
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             
