@@ -44,7 +44,7 @@ const EventRegistration = () => {
         </div>
       </main>
       <Footer />
-      <ChatbotInterface />
+      {/* <ChatbotInterface /> */}
     </div>
   );
 };
