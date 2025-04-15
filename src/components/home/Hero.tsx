@@ -60,7 +60,7 @@ const Hero = () => {
         <div className="mx-auto max-w-4xl rounded-2xl overflow-hidden shadow-xl bg-white/10 backdrop-blur-sm border border-white/20">
           <div className="aspect-video relative">
             <iframe
-              src="https://youtu.be/q6CTxEiXpIA?si=iVSf-nD3p_3sm5-Q"
+              src="https://www.youtube.com/embed/q6CTxEiXpIA?si=ZTWla6AKvkZMj8Ud"
               title="EVEPHORIA Platform Introduction"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
